@@ -1,5 +1,7 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Login from './components/Login'; // Correct the import path
 
 const Dashboard = () => (
   <div>
@@ -16,6 +18,9 @@ const App = () => (
           <li>
             <Link to="/">Dashboard</Link>
           </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
           {/* Add more navigation links */}
         </ul>
       </nav>
@@ -24,6 +29,7 @@ const App = () => (
 
       <Routes>
         <Route path="/" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
         {/* Add more routes for different components */}
       </Routes>
     </div>
